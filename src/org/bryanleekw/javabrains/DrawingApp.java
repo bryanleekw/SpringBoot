@@ -11,8 +11,8 @@ public class DrawingApp {
 	public static void main(String[] args) {
 		//Triangle triangel = new Triangle(); 
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("config.xml"));
-		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-		Triangle triangle = (Triangle) context.getBean("triangle");
+		ApplicationContext context = new ClassPathXmlApplicationContext("configTutorial9.xml");
+		NewTriangle triangle = (NewTriangle) context.getBean("triangle");
 		triangle.draw();
 	}
 }

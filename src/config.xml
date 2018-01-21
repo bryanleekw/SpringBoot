@@ -2,7 +2,23 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="triangle" class="org.bryanleekw.javabrains.Triangle">
-		<constructor-arg value="Equilateral" />
+	<bean id="triangle" class="org.bryanleekw.javabrains.NewTriangle">
+		<property name="pointA" ref="zeroPoint" />
+		<property name="pointB" ref="Point2" />
+		<property name="pointC" ref="Point3" />		
 	</bean>
+	
+	<bean id="zeroPoint" class="org.bryanleekw.javabrains.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />		 
+	</bean>
+	<bean id="Point2" class="org.bryanleekw.javabrains.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />		 
+	</bean>
+	<bean id="Point3" class="org.bryanleekw.javabrains.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />		 
+	</bean>
+	
 </beans>
